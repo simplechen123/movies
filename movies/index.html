@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>电影院之推荐篇</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div id='container'>
+		<div id="header">电影院之推荐篇——每个人都是自己生活的导演
+		</div>
+		<div id="banner">
+			<div>梦想始于剧本，而终结于电影。让一个人置身于变幻无穷的环境中，让他与数不尽或远或近的人物错身而过，让他与整个世界发生关系：这就是电影的意义。<br/>
+			<p>——安德烈·塔可夫斯基（苏联）</p>
+			</div>
+		</div>
+		<ul id="nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="time.html">小时代</a></li>
+			<li><a href="sun.html">暮光之城</a></li>
+			<li><a href="ring.html">魔戒三部曲</a></li>
+			<li><a href="wind.html">等风来</a></li>
+			<li><a href="ship.html">泰坦尼克号</a></li>
+		</ul>
+		<div id="view">
+			<ul id="tab">
+				<li class="selected"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div id="content">
+				<img class="selected" src="img/4.jpeg">
+				<img src="img/2.jpg">
+				<img src="img/3.jpg">
+				<img src="img/1.jpg">
+				<img src="img/5.jpg">
+			</div>
+			<div id="text">
+				<p class="selected">小时代</p>
+				<p>魔戒三部曲</p>
+				<p>等风来</p>
+				<p>暮光之城</p>
+				<p>泰坦尼克号</p>
+			</div>
+			<span id="left">&lt;</span>
+			<span id='right'>&gt;</span>
+		</div>
+
+		<div id="label">
+			相关推荐
+			<hr/>
+		</div>
+		<ul class="recommond">
+			<li><img src="img/11.jpeg"><div>大话西游</div>
+			</li>
+			<li><img src="img/12.jpg"><div>致我们终将逝去的青春</div>
+			</li>
+			<li><img src="img/13.jpg"><div>霸王别姬</div>
+			</li>
+			<li><img src="img/14.jpg"><div>肖申克的救赎</div>
+			</li>			
+		</ul>
+		<ul class="recommond">
+			<li><img src="img/15.jpg"><div>公爵夫人</div>
+			</li>
+			<li><img src="img/18.png"><div>霍比特人</div>
+			</li>
+			<li><img src="img/17.jpg"><div>盗梦空间</div>
+			</li>
+			<li><img src="img/16.jpg"><div>冰河世纪</div>
+			</li>			
+		</ul>
+
+		<div id="footer">电影院之推荐篇</div>
+	</div>
+
+	<script>
+		var oView = document.getElementById('view');
+		var aLi = document.getElementById('tab').getElementsByTagName('li');
+		var aImg = document.getElementById('content').getElementsByTagName('img');
+		var aText = document.getElementById('text').getElementsByTagName('p');
+		var index = 0;//页面加载时为0
+
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].index = i;
+			aLi[i].onclick = function(){
+				index = this.index;//点击li后，相应index值
+				switchImg(index);
+			};
+		}
+
+		function switchImg(idx){
+			for(var i=0;i<aLi.length;i++){
+					aLi[i].className = "";
+					aImg[i].className = "";
+					aText[i].className = "";
+				}
+				aLi[idx].className = "selected";
+				aImg[idx].className = "selected";
+				aText[idx].className = "selected";
+		}
+
+		var oLeft = document.getElementById('left');
+		var oRight = document.getElementById('right');
+		oLeft.onclick = function(){
+			index--;
+			if(index == -1){
+				index = aLi.length - 1;
+			}
+			switchImg(index);
+		};
+		oRight.onclick = function(){
+			index++;
+			if(index == aLi.length){
+				index = 0;
+			}
+			switchImg(index);//注意不是this.index
+		};
+
+		function start(){
+			timer = setInterval(function(){
+			oRight.onclick();
+			},1000);
+		}
+
+		start();//初始加载即定时器启动
+		oView.onmouseover = function(){
+			clearInterval(timer);
+		};
+		oView.onmouseout = function(){
+			start();
+		};
+	</script>
+
+
+</body>
+</html>

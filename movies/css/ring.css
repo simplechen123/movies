@@ -1,0 +1,50 @@
+#tab{
+	width: 960px;
+	margin: 0 auto;
+}
+#tab td{
+	line-height: 150%;
+	padding: 8px;
+}
+#tab .tit{
+	width: 65px;
+	background: #589ac6;
+}
+.label{
+	width: 970px;
+	margin: 15px auto;
+	font-size: 150%;
+	font-weight: bold;
+	color: #589ac6;
+}
+.label hr{
+	float: right;
+	width: 860px;
+	margin-top: 13px;
+	border: 1px dashed #aaa;
+}
+ .role{
+	width: 970px;
+	height: 185px;
+	margin: 0 auto;
+	list-style: none;
+}
+.role li{
+	float: left;
+	margin: 0 14px 0 14px;
+	position: relative;
+}
+.role li img{
+	border: 2px solid #589ac6;
+}
+.role li div{
+	width: 210px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+	position: absolute;
+	top: 159px;
+}
+#footer{
+	margin-top: 40px;
+}

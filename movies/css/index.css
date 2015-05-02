@@ -1,0 +1,115 @@
+/*....view start....*/
+#view{
+	width: 960px;
+	height: 500px;
+	margin: 20px auto;
+	border: 6px solid #589ac6;
+	position: relative;
+	overflow: hidden;
+}
+#tab{
+	height: 20px;
+	list-style: none;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+#tab li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	margin-right: 10px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+	font-size: 150%;
+	cursor: pointer;
+}
+#content img{
+	width: 960px;
+	height: 500px;
+}
+#text p{
+	color: #fff;
+	position: absolute;
+	left: 50px;
+	bottom: 20px;
+	font-size: 210%;
+	font-weight: bold;
+}
+#left,#right{
+	width: 40px;
+	height: 40px;
+	color: orange;
+	text-align: center;
+	line-height: 40px;
+	font-size: 250%;
+	cursor: pointer;
+	font-weight: bold;
+}
+#left{
+	position: absolute;
+	left: 5px;
+	top: 230px
+}
+#right{
+	position: absolute;
+	right: 5px;
+	top: 230px
+}
+#tab .selected{
+	background: orange;
+}
+#content img,#text p{
+	display: none;
+}
+#content .selected,#text .selected{
+	display: block;
+}
+/*....view end....*/
+
+#label{
+	width: 970px;
+	height: 30px;
+	margin: 0 auto;
+	font-size: 150%;
+	color: #589ac6;
+}
+#label hr{
+	float: right;
+	width: 860px;
+	margin-top: 13px;
+	border: 1px dashed #ccc;
+}
+.recommond{
+	width: 970px;
+	height: 210px;
+	margin: 0 auto;
+	list-style: none;
+}
+.recommond li{
+	width: 214px;
+	float: left;
+	margin: 14px 14px 0 14px;
+	position: relative;
+}
+.recommond img{
+	width: 218px;
+	height: 159px;
+}
+.recommond li div{
+	width: 218px;
+	height: 26px;
+	background: #222;
+	color: #fff;
+	text-indent: 7px;
+	text-align: center;
+	line-height: 26px;
+	position: absolute;
+	top: 159px;
+}
+#footer{
+	margin-top: 16px;
+}

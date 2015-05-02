@@ -1,0 +1,23 @@
+#tit{
+	display: block;
+	margin: 20px auto;
+}
+#content{
+	width: 960px;
+	margin: 30px auto;
+	list-style: none;
+}
+#content li{
+	border: 1px #ccc solid;
+	margin: 5px;
+	position: relative;
+}
+#content span{
+	/*font-size: 120%;*/
+	width: 620px;
+	line-height: 150%;
+	position: absolute;
+	top: 36px;
+	left: 270px;
+}
+

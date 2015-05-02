@@ -1,0 +1,31 @@
+body{
+	height: 1184px;
+	background: #000;
+}
+#header{
+	color: #ddd;
+}
+#content {
+	width: 960px;
+	background: #fff;
+	margin: 20px auto;
+	border: 3px dashed #000;
+}
+#content img{
+	display: block;
+	margin: 0 auto;
+	width: 960px;
+	height: 500px;
+}
+#content div{
+	width: 920px;
+	margin: 0 auto;
+	text-indent: 30px;
+	color: #4eb5fc;
+/*	background: #000;*/
+	padding: 20px;
+	font-size: 140%;
+	font-weight: bold;
+	line-height: 120%;
+}
+

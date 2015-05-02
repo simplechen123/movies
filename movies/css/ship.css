@@ -1,0 +1,57 @@
+body{
+	height: 1184px;
+}
+.label{
+	width: 960px;
+	margin: 15px auto;
+	font-size: 150%;
+	font-weight: bold;
+	color: #589ac6;
+}
+.label hr{
+	float: right;
+	width: 860px;
+	margin-top: 13px;
+	border: 1px dashed #aaa;
+}
+#create{
+	width: 930px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 3px dashed #589ac6;
+	background: #fff;
+}
+#create dd{
+	text-indent: 32px;
+	line-height: 150%;
+}
+#content{
+	width: 950px;
+	height: 200px;
+	margin: 20px auto;
+	border: 5px dashed #589ac6;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+#slider{
+	list-style: none;
+/*	height: 400px;*/
+}
+#slider li{
+	float: left;
+	height: 200px;
+	margin-right: 10px;
+}
+#slider img{
+	width: 310px;
+	height: 200px;
+}
+/*embed{
+	display: block;
+	width: 200px;
+	height: 60px;
+}*/
+
+
+

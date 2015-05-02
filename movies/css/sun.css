@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#content{
+	width: 960px;
+	height: 400px;
+	margin: 20px auto;
+	border: 5px solid #589ac6;
+	overflow: hidden;
+	position: relative;
+}
+#slider{
+	list-style: none;
+/*	height: 400px;*/
+}
+#slider li{
+	float: left;
+	height: 400px;
+	margin-right: 10px;
+}
+#slider img{
+	width: 310px;
+	height: 400px;
+}
+
+.label{
+	width: 970px;
+	margin: 15px auto;
+	font-size: 150%;
+	font-weight: bold;
+	color: #589ac6;
+}
+.label hr{
+	float: right;
+	width: 860px;
+	margin-top: 13px;
+	border: 1px dashed #aaa;
+}
+#intro{
+	width: 960px;
+	margin: 0 auto;
+}
+#intro dd{
+	text-indent: 32px;
+	font-size: 120%;
+	font-weight: bold;
+	line-height: 150%;
+	color: #333;
+}
+#tab{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+#tab td{
+	line-height: 150%;
+	padding: 8px;
+}
+#tab .tit{
+	width: 65px;
+}

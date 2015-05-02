@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>电影院之推荐篇</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/sun.css">
+</head>
+<body>
+	<div id='container'>
+		<div id="header">电影院之推荐篇——每个人都是自己生活的导演
+		</div>
+		<div id="banner">
+			<div>梦想始于剧本，而终结于电影。让一个人置身于变幻无穷的环境中，让他与数不尽或远或近的人物错身而过，让他与整个世界发生关系：这就是电影的意义。<br/>
+			<p>——安德烈·塔可夫斯基（苏联）</p>
+			</div>
+		</div>
+		<ul id="nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="time.html">小时代</a></li>
+			<li><a href="sun.html">暮光之城</a></li>
+			<li><a href="ring.html">魔戒三部曲</a></li>
+			<li><a href="wind.html">等风来</a></li>
+			<li><a href="ship.html">泰坦尼克号</a></li>
+		</ul>
+		<div id='content'>
+			<ul id='slider'>
+				<li><img src="img/21.jpg"></li>
+				<li><img src="img/22.jpg"></li>
+				<li><img src="img/23.1.jpg"></li>
+				<li><img src="img/24.1.jpg"></li>
+				<li><img src="img/24.2.jpg"></li>
+			</ul>
+		</div>
+		<div class="label">
+			内容简介
+			<hr/>
+		</div>
+		<dl id='intro'>
+			<dd>《暮光之城》是美国作家斯蒂芬妮·梅尔（Stephenie Meyer）写的一本恐怖但是却浪漫的小说。小说《暮光之城》，描写的是高中学生贝拉与青春帅气的吸血鬼爱德华的浪漫爱情故事。</dd>
+			<dd>在世界许多国家，它也是名列榜首的畅销书。被称谓后“哈利波特时代”的魔幻巨著，成为《魔戒三部曲》《哈利波特系列》《纳尼亚传奇》之后的国际魔幻系列代表。</dd>
+			<dd>“暮光之城”系列以伊莎贝拉·斯旺和爱德华·卡伦的情感纠葛为主线，融合了吸血鬼传说、狼人故事、校园生活、恐怖悬念、喜剧冒险等各种吸引眼球的元素，而凄美动人的爱情则是全书“最强烈的情绪”。</dd>
+		</dl>
+		<div class="label">
+			作品系列
+			<hr/>
+		</div>
+		<div id="footer">
+			暮光之城（斯蒂芬妮·梅尔著系列小说）
+		</div>
+		<table id="tab" border='1'>
+			<tr>
+				<td class="tit">《暮色》</td>
+				<td>在这个世界上我只喜欢三件事，太阳、月亮和你，太阳是为了白天而存在，月亮是为了夜晚，而你对我来说却是永恒的。</td>
+			</tr>
+			<tr>
+				<td class="tit">《新月》</td>
+				<td>俯瞰“暮色”的风景，在漆黑的夜空上挂着一轮新月。无论遇到什么困难，只要在一起是真实的，爱德华与贝拉就能够去勇敢迎接命运，与命中注定的爱人一起并肩面对一切。</td>
+			</tr>
+			<tr>
+				<td class="tit">《月食》</td>
+				<td>冰与火的矛盾不可调和，在爱与牺牲的天平上，贝拉发现她所要奉献的不只是灵魂。</td>
+			</tr>
+			<tr>
+				<td class="tit">《破晓》</td>
+				<td>当你深爱着准备取你性命的人时，你已没有选择的余地了。对于贝拉来说，无可救药地爱上爱德华之后，就像是在越来越危险的现实中编织了幻想与梦魇。她是加入这黑暗却充满诱惑的世界，还是追求一个全然的人类生命，不管她作出什么样的抉择，都将不可避免地牵动着两个族群的命运。</td>
+			</tr>
+		</table>
+		
+	</div>
+
+	<script>
+		var oSlider = document.getElementById('slider');
+		var aLi = oSlider.getElementsByTagName('li');
+		oSlider.innerHTML += oSlider.innerHTML;
+		oSlider.style.width = aLi.length * (aLi[0].offsetWidth + 10) + 'px';
+		var iSpeed = -2;
+		setInterval(function(){
+			oSlider.style.position = "absolute";
+			if(oSlider.offsetLeft <= -oSlider.offsetWidth/2){
+				oSlider.style.left = 0;
+			}
+			if(oSlider.offsetLeft > 0){
+				oSlider.style.left = -oSlider.offsetWidth/2;
+			}
+			oSlider.style.left = oSlider.offsetLeft + iSpeed + 'px';
+
+
+		},30);
+
+	</script>
+</body>
+</html>
